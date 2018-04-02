@@ -106,7 +106,6 @@ void ShowMembers(STMT *statements,int size) {
 	 cout << "Enter the member id : ";
 	 cin >> mid;
 	 cin.clear();
-	// if(!isdigit(mid)) {
 	 
 	   if(!Mid_Check(stmt,mid)) {
     	cout << "This Member is not registered for any class\n";
@@ -126,13 +125,7 @@ void ShowMembers(STMT *statements,int size) {
 	 
 	 
 	 stmt->closeResultSet(rs);
-	// } 
-	// else {
-	 //cin.clear();
-	// cout << "Value entered is not a valid id\n";
-	 //exit(0);
-	// }
-	 
+		 
 } 
 	// show memebrs who have expired membership
 void ShowExpired(STMT *statements,int size) {
@@ -188,9 +181,7 @@ void ShowLevelSpecified(STMT *statements,int size) {
      //string c = rs->getString(3);
      		cout << "Name: " <<  a  << endl;
      		cout << "=================\n";
-     	//	cout << b << endl;
-   //    cout << c << endl;
-     }
+          }
     
     stmt->closeResultSet(rs);
 }
@@ -272,16 +263,14 @@ void OpenRoom(STMT *statements,int size) {
 }
 int main()
 {
-    string userName = "alsalehb";
-    string password = "BadeR322";
-    const string connectString = "sunfire.csci.viu.ca";
+     const string connectString = "sunfire.csci.viu.ca";
 
     // Establish connection using userName and password
-     //cout << "Your user name:\n ";
-    //getline(cin, userName);
+    cout << "Your user name:\n ";
+    getline(cin, userName);
 
     cout << "Your password: \n";
-    //password = readPassword();
+    password = readPassword();
 
      Environment *env = Environment::createEnvironment();
      Connection *conn = env->createConnection
