@@ -1,0 +1,5 @@
+This program lets an employee search, updates, adds and delete members of a gym. 
+
+Dependencies: 
+Oracle C++ interface occi.h
+
